@@ -9,6 +9,7 @@ import { FoterHomeComponent } from './Home/foter-home/foter-home.component';
 import { SingupComponent } from './Home/singup/singup.component';
 import { LoginComponent } from './Home/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './Home/home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderHomeComponent,
     FoterHomeComponent,
     SingupComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

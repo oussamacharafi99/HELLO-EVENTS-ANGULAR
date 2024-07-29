@@ -1,0 +1,10 @@
+.header{
+    width: 100%;
+    padding: 10px 20px;
+}
+.header-img{
+    width: 120px;
+}
+.header-img > img{
+    width: 100%;
+}
