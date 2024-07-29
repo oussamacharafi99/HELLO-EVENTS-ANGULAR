@@ -12,6 +12,7 @@ export class ServiceService {
   private _API_ADD_EVENT = 'http://localhost:9000/api/events/add';
   private _API_SIGNUP = 'http://localhost:9000/api/user/signup';
   private _API_LOGIN = 'http://localhost:9000/api/user/login';
+  private _API_GET_EVENTS = 'http://localhost:9000/api/events/get_all';
 
   constructor(private http: HttpClient) { }
 
@@ -29,4 +30,11 @@ export class ServiceService {
   public _add_events(event: Event): Observable<Event> {
     return this.http.post<Event>(this._API_ADD_EVENT, event);
   }
+
+   /*----*__GET_EVENTs__*-----*/
+   public _get_all_event(): Observable<Event[]> {
+    return this.http.get<Event[]>(this._API_GET_EVENTS);
+  }
+
+
 }
