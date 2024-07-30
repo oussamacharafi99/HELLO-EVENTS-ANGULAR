@@ -13,7 +13,8 @@ export class ServiceService {
   private _API_SIGNUP = 'http://localhost:9000/api/user/signup';
   private _API_LOGIN = 'http://localhost:9000/api/user/login';
   private _API_GET_EVENTS = 'http://localhost:9000/api/events/get_all';
-  private _API_GET_EVENT_By_Id = 'http://localhost:9000/api/events/';
+
+  private _API_EVENT = 'http://localhost:9000/api/events/';
 
 
   constructor(private http: HttpClient) { }
@@ -40,9 +41,36 @@ export class ServiceService {
 
   /*----*__GET_EVENTs_By_Id__*-----*/
   public _getEventById(id:number): Observable<Event> {
-    return this.http.get<Event>(`${this._API_GET_EVENT_By_Id+"get"}/${id}`);
+    return this.http.get<Event>(`${this._API_EVENT+"get"}/${id}`);
 
 }
+   /*----*__Delete_EVENTs_By_Id__*-----*/
+   public _deleteEventById(id:number): Observable<Event> {
+    return this.http.delete<Event>(`${this._API_EVENT+"delete"}/${id}`);
+
+}
+
+/*----*__Update_EVENTs_By_Id__*-----*/
+public _updateEvent(event:Event,id:number): Observable<Event> {
+  return this.http.put<Event>(`${this._API_EVENT+"delete"}/${id}`,event);
+
+}
+
+// public searchEvents(date?: string, location?: string, category?: string): Observable<Event[]> {
+//     let params = new HttpParams();
+    
+//     if (date) {
+//       params = params.set('date', date);
+//     }
+//     if (location) {
+//       params = params.set('location', location);
+//     }
+//     if (category) {
+//       params = params.set('category', category);
+//     }
+
+//     return this.http.get<Event[]>(this._API_SEARCH_EVENTS, { params });
+//   }
 
 
 }
