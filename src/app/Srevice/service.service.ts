@@ -36,28 +36,28 @@ export class ServiceService {
   }
 
   /*----*__ADD_EVENT__*-----*/
-  public _add_events(event: Event): Observable<Event> {
+  public addEvents(event: Event): Observable<Event> {
     return this.http.post<Event>(this._API_ADD_EVENT, event);
   }
 
    /*----*__GET_EVENTs__*-----*/
-   public _get_all_event(): Observable<Event[]> {
+   public getAllEvent(): Observable<Event[]> {
     return this.http.get<Event[]>(this._API_GET_EVENTS);
   }
 
   /*----*__GET_EVENTs_By_Id__*-----*/
-  public _getEventById(id:number): Observable<Event> {
+  public getEventById(id:number): Observable<Event> {
     return this.http.get<Event>(`${this._API_EVENT}get/${id}`);
 
 }
    /*----*__Delete_EVENTs_By_Id__*-----*/
-   public _deleteEventById(id:number): Observable<Event> {
+   public deleteEventById(id:number): Observable<Event> {
     return this.http.delete<Event>(`${this._API_EVENT}delete/${id}`);
 
 }
 
 /*----*__Update_EVENTs_By_Id__*-----*/
-public _updateEvent(event:Event,id:number): Observable<Event> {
+public updateEvent(event:Event,id:number): Observable<Event> {
   return this.http.put<Event>(`${this._API_EVENT}update/${id}`,event);
 
 }
@@ -84,21 +84,21 @@ public searchEvents(date?: string, location?: string, category?: string): Observ
 /*----*-------------------RESERVATION-----------------------------------------------*/
 
 /*----*__ADD_RESERVATION__*-----*/
-public _add_reservation(reservation: Reservation): Observable<Reservation> {
+public addReservation(reservation: Reservation): Observable<Reservation> {
   return this.http.post<Reservation>(`${this._API_RESERVATION}add`, reservation);
 }
 
   /*----*__GET_RESERVATION_By_User__*-----*/
- public get_user_reservation(): Observable<Reservation[]> {
+ public getUserReservation(): Observable<Reservation[]> {
   return this.http.get<Reservation[]>(`${this._API_RESERVATION}get_user_reservation`);
 }
  /*----*__GET_All_RESERVATION__*-----*/
- public get_all_reservation(): Observable<Reservation[]> {
+ public getAllReservation(): Observable<Reservation[]> {
   return this.http.get<Reservation[]>(`${this._API_RESERVATION}get_all`);
 }
 
  /*----*__Delete_RESERVATION__*-----*/
- public _deleteReservationById(id:number): Observable<Reservation> {
+ public deleteReservationById(id:number): Observable<Reservation> {
   return this.http.delete<Reservation>(`${this._API_RESERVATION}delete/${id}`);
 
 }
@@ -106,16 +106,16 @@ public _add_reservation(reservation: Reservation): Observable<Reservation> {
 /*----*------------------- CONTACT-----------------------------------------------*/
 
 /*----*__ADD_CONTACT__*-----*/
-public _add_contact(contact:Contact,id:number): Observable<Contact> {
+public addContact(contact:Contact,id:number): Observable<Contact> {
   return this.http.post<Contact>(`${this._API_CONTACT}add/${id}`, contact);
 }
 
   /*----*__GET_Contact_By_User_Id__*-----*/
- public get_ContactByUserId(id:number): Observable<Contact[]> {
+ public getContactByUserId(id:number): Observable<Contact[]> {
   return this.http.get<Contact[]>(`${this._API_CONTACT}get/${id}`);
 }
  /*----*__GET_All_Contact__*-----*/
- public get_all_contact(): Observable<Contact[]> {
+ public getAllContact(): Observable<Contact[]> {
   return this.http.get<Contact[]>(`${this._API_CONTACT}get_all`);
 }
 
