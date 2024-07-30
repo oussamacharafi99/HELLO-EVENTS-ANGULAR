@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { User } from '../Models/user';
 import { JwtDto } from '../Models/Jwt';
 import { Reservation } from '../Models/reservation';
+import { Contact } from '../Models/conatct';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,8 @@ export class ServiceService {
   private _API_EVENT = 'http://localhost:9000/api/events/';
 
   private _API_RESERVATION = 'http://localhost:9000/api/reservations/';
+  private _API_CONTACT = 'http://localhost:9000/api/contact/';
+
 
 
   constructor(private http: HttpClient) { }
@@ -76,12 +79,14 @@ public _updateEvent(event:Event,id:number): Observable<Event> {
 //   }
 
 
+/*----*-------------------RESERVATION-----------------------------------------------*/
+
 /*----*__ADD_RESERVATION__*-----*/
 public _add_reservation(reservation: Reservation): Observable<Reservation> {
   return this.http.post<Reservation>(`${this._API_RESERVATION+"add"}`, reservation);
 }
 
- /*----*__GET_RESERVATION_By_User__*-----*/
+  /*----*__GET_RESERVATION_By_User__*-----*/
  public get_user_reservation(): Observable<Reservation[]> {
   return this.http.get<Reservation[]>(`${this._API_RESERVATION+"get_user_reservation"}`);
 }
@@ -95,6 +100,23 @@ public _add_reservation(reservation: Reservation): Observable<Reservation> {
   return this.http.delete<Reservation>(`${this._API_RESERVATION+"delete"}/${id}`);
 
 }
+
+/*----*------------------- CONTACT-----------------------------------------------*/
+
+/*----*__ADD_CONTACT__*-----*/
+public _add_contact(contact:Contact,id:number): Observable<Contact> {
+  return this.http.post<Contact>(`${this._API_CONTACT+"add"}/${id}`, contact);
+}
+
+  /*----*__GET_Contact_By_User_Id__*-----*/
+ public get_ContactByUserId(id:number): Observable<Contact[]> {
+  return this.http.get<Contact[]>(`${this._API_CONTACT+"get"}/${id}`);
+}
+ /*----*__GET_All_Contact__*-----*/
+ public get_all_contact(): Observable<Contact[]> {
+  return this.http.get<Contact[]>(`${this._API_CONTACT+"get_all"}`);
+}
+
 
 
 }
