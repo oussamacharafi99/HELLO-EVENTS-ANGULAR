@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../Models/user';
 import { JwtDto } from '../Models/Jwt';
+import { Reservation } from '../Models/reservation';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,8 @@ export class ServiceService {
   private _API_GET_EVENTS = 'http://localhost:9000/api/events/get_all';
 
   private _API_EVENT = 'http://localhost:9000/api/events/';
+
+  private _API_RESERVATION = 'http://localhost:9000/api/reservations/';
 
 
   constructor(private http: HttpClient) { }
@@ -71,6 +74,27 @@ public _updateEvent(event:Event,id:number): Observable<Event> {
 
 //     return this.http.get<Event[]>(this._API_SEARCH_EVENTS, { params });
 //   }
+
+
+/*----*__ADD_RESERVATION__*-----*/
+public _add_reservation(reservation: Reservation): Observable<Reservation> {
+  return this.http.post<Reservation>(`${this._API_RESERVATION+"add"}`, reservation);
+}
+
+ /*----*__GET_RESERVATION_By_User__*-----*/
+ public get_user_reservation(): Observable<Reservation[]> {
+  return this.http.get<Reservation[]>(`${this._API_RESERVATION+"get_user_reservation"}`);
+}
+ /*----*__GET_All_RESERVATION__*-----*/
+ public get_all_reservation(): Observable<Reservation[]> {
+  return this.http.get<Reservation[]>(`${this._API_RESERVATION+"get_all"}`);
+}
+
+ /*----*__Delete_RESERVATION__*-----*/
+ public _deleteReservationById(id:number): Observable<Reservation> {
+  return this.http.delete<Reservation>(`${this._API_RESERVATION+"delete"}/${id}`);
+
+}
 
 
 }
