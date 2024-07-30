@@ -58,7 +58,7 @@ export class ServiceService {
 
 /*----*__Update_EVENTs_By_Id__*-----*/
 public _updateEvent(event:Event,id:number): Observable<Event> {
-  return this.http.put<Event>(`${this._API_EVENT+"delete"}/${id}`,event);
+  return this.http.put<Event>(`${this._API_EVENT+"update"}/${id}`,event);
 
 }
 
