@@ -13,6 +13,8 @@ export class ServiceService {
   private _API_SIGNUP = 'http://localhost:9000/api/user/signup';
   private _API_LOGIN = 'http://localhost:9000/api/user/login';
   private _API_GET_EVENTS = 'http://localhost:9000/api/events/get_all';
+  private _API_GET_EVENT_By_Id = 'http://localhost:9000/api/events/';
+
 
   constructor(private http: HttpClient) { }
 
@@ -35,6 +37,12 @@ export class ServiceService {
    public _get_all_event(): Observable<Event[]> {
     return this.http.get<Event[]>(this._API_GET_EVENTS);
   }
+
+  /*----*__GET_EVENTs_By_Id__*-----*/
+  public _getEventById(id:number): Observable<Event> {
+    return this.http.get<Event>(`${this._API_GET_EVENT_By_Id+"get"}/${id}`);
+
+}
 
 
 }

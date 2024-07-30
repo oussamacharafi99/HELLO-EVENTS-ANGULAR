@@ -13,4 +13,3 @@ export interface Event {
     reservations: Reservation[];
     user: User;
   }
-  
