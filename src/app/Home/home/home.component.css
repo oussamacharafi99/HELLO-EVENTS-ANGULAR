@@ -1,14 +1,61 @@
 .container{
     width: 100%;
     height: 100vh;
-    background: url("../../../assets/images/helloevents.png") no-repeat top right/cover;
+    padding: 20px 0;
 }
 .main{
-    width: 60%;
-    height: 70%;
-    border: 10px solid black;
-    background-image: url("../../../assets/images/téléchargemen.jpeg");
-    background-size: cover;
-    margin: 0 auto;
-    border-radius: 10px;
+    width: 90%;
+    height: 100%;
+    background: url("../../../assets/images/bg2.png") no-repeat top right/cover;
+    margin:  auto;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.47);
+}
+.hero-main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    width: 49%;
+    height: 420px;
+    position: relative;
+}
+.left-bottom{
+    width:55%;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.543);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    bottom: 0;
+    right: 65px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.left-bottom > h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+}
+.right{
+    width: 49%;
+    padding-top: 40px;
+}
+.right > h1{
+    color: black;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 900;
+}
+.right > h2{
+    text-transform: uppercase;
+    color: white;
+}
+.right > p{
+    text-transform: uppercase;
+}
+em{
+    color: white;
+    background: black;
 }
