@@ -14,7 +14,7 @@ export class FoterHomeComponent implements OnInit {
   constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
-    this.service._get_all_event().subscribe((data : any[]) => {
+    this.service.getAllEvent().subscribe((data : any[]) => {
       this.listEvents = data;
       console.log("this data"+data);
       
