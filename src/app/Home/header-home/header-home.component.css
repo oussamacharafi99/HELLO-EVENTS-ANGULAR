@@ -1,10 +1,42 @@
 .header{
-    width: 100%;
+    width: 95%;
     padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 .header-img{
     width: 120px;
 }
 .header-img > img{
     width: 100%;
+}
+.btns{
+    display: flex;
+    align-items: center;
+}
+.btns > button{
+    border: 2px solid transparent;
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px;
+    margin: 2px;
+    transition: .4s;
+    cursor: pointer;
+}
+.btns > button:hover{
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+}
+#login{
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+}
+#login:hover{
+    text-decoration: underline;
 }
