@@ -1,3 +1,7 @@
+::selection{
+    color: yellow;
+    background: black;
+}
 .container{
     width: 100%;
     height: 100vh;
@@ -8,7 +12,7 @@
     height: 100%;
     background: url("../../../assets/images/bg2.png") no-repeat top right/cover;
     margin:  auto;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.47);
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.47);
 }
 .hero-main{
     width: 100%;
@@ -23,15 +27,18 @@
 .left-bottom{
     width:55%;
     height: 120px;
-    background: rgba(0, 0, 0, 0.543);
+    background: rgba(0, 0, 0, 0.311);
     backdrop-filter: blur(10px);
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     right: 65px;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
+    border: 5px solid white;
+    box-shadow: 4px 4px 15px rgb(0, 0, 0);
+    transform: rotate(15deg);
 }
 .left-bottom > h1 {
     color: white;
@@ -41,6 +48,7 @@
 .right{
     width: 49%;
     padding-top: 40px;
+    position: relative;
 }
 .right > h1{
     color: black;
@@ -58,4 +66,19 @@
 em{
     color: white;
     background: black;
+}
+.right > a{
+    color: var(--color-light);
+    font-size: 25px;
+    font-weight: 700;
+    background: black;
+    padding: 8px;
+    text-decoration: none;
+    position: absolute;
+    right: 50px;
+}
+.right > a:hover{
+    color: black;
+    border: 2px solid black;
+    background: transparent;
 }
