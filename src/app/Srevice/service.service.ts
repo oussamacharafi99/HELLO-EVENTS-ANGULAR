@@ -92,6 +92,7 @@ public addReservation(reservation: Reservation): Observable<Reservation> {
  public getUserReservation(): Observable<Reservation[]> {
   return this.http.get<Reservation[]>(`${this._API_RESERVATION}get_user_reservation`);
 }
+
  /*----*__GET_All_RESERVATION__*-----*/
  public getAllReservation(): Observable<Reservation[]> {
   return this.http.get<Reservation[]>(`${this._API_RESERVATION}get_all`);
