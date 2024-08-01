@@ -1,1 +1,22 @@
-<p>search works!</p>
+<form (ngSubmit)="onSearch()">
+    <label for="date">Date:</label>
+    <input id="date" name="date" [(ngModel)]="searchParams.date" type="date">
+  
+    <label for="location">Location:</label>
+    <input id="location" name="location" [(ngModel)]="searchParams.location" type="text">
+  
+    <label for="category">Category:</label>
+    <input id="category" name="category" [(ngModel)]="searchParams.category" type="text">
+  
+    <button type="submit">Search</button>
+  </form>
+  
+  <ul *ngFor="let event of events">
+    <li >{{ event.name }}</li>
+    <li >{{ event.date }}</li>
+    <li >{{ event.startTime }}</li>
+    <li >{{ event.location }}</li>
+    <li >{{ event.price }}</li>
+    <li >{{ event.category }}</li>
+  </ul>
+  

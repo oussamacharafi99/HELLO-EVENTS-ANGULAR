@@ -30,7 +30,6 @@ export class ServiceService {
     return this.http.post<JwtDto>(this._API_LOGIN, user);
   }
 
-  
   /*----*__SIGNUP__*-----*/
   public signup(user: User): Observable<string> {
     return this.http.post<string>(this._API_SIGNUP, user);
@@ -78,7 +77,7 @@ public searchEvents(date?: string, location?: string, category?: string): Observ
     params = params.set('category', category);
   }
 
-  return this.http.get<Event[]>(`${this._API_EVENT}seatch`, { params });
+  return this.http.get<Event[]>(`${this._API_EVENT}search`, { params });
 }
 
 
