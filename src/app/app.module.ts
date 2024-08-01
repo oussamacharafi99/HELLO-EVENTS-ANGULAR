@@ -22,6 +22,7 @@ import { MainComponent } from './Main/main/main.component';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { LogoutComponent } from './Dashboard/logout/logout.component';
 import { MaterialeModule } from './materiale/materiale.module';
+import { ChartComponent } from './Dashboard/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MaterialeModule } from './materiale/materiale.module';
     SearchComponent,
     MainComponent,
     DashboardComponent,
-    LogoutComponent
+    LogoutComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
