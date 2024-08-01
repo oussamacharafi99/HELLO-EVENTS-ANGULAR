@@ -18,6 +18,8 @@ import { AddContactComponent } from './Main/add-contact/add-contact.component';
 import { ShowContactComponent } from './Dashboard/show-contact/show-contact.component';
 import { SearchComponent } from './Main/search/search.component';
 import { MainComponent } from './Main/main/main.component';
+import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
+import { LogoutComponent } from './Dashboard/logout/logout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import { MainComponent } from './Main/main/main.component';
     AddContactComponent,
     ShowContactComponent,
     SearchComponent,
-    MainComponent
+    MainComponent,
+    DashboardComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

@@ -40,3 +40,62 @@
 #login:hover{
     text-decoration: underline;
 }
+.popup , .popup-signup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.148);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup > button , .popup-signup > button {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    border: none;
+    border-radius: 12px;
+    background: var(--color-light);
+    padding: 10px 14px;
+    color: black;
+    transition: .4s;
+    cursor: pointer;
+  }
+  
+  .popup > button:hover , .popup-signup > button:hover {
+    background: black;
+    color: var(--color-light);
+  }
+  
+  .item{
+    width: 33%;
+  }
+  .item > img{
+    width: 70%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+  }
+  .item2 > img{
+    width: 90%;
+  }
+  .btns{
+    width: 30%;
+  }
+  .btns > button{
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: black;
+    background: white;
+    font-weight: 800;
+    border: 2px solid white;
+    margin: 0 3px;
+  }
+  .btns > button:hover{
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+  }
