@@ -7,7 +7,7 @@ import { HeaderHomeComponent } from './Home/header-home/header-home.component';
 import { SingupComponent } from './Home/singup/singup.component';
 import { LoginComponent } from './Home/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { InterceptorAuth } from './Srevice/auth_interceptor.service';
+// import { InterceptorAuth } from './Srevice/auth_interceptor.service';
 import { HomeComponent } from './Home/home/home.component';
 import { AddEventComponent } from './Dashboard/add-event/add-event.component';
 import { EventComponent } from './Main/event/event.component';
@@ -18,6 +18,8 @@ import { AddContactComponent } from './Main/add-contact/add-contact.component';
 import { ShowContactComponent } from './Dashboard/show-contact/show-contact.component';
 import { SearchComponent } from './Main/search/search.component';
 import { MainComponent } from './Main/main/main.component';
+import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
+import { LogoutComponent } from './Dashboard/logout/logout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import { MainComponent } from './Main/main/main.component';
     AddContactComponent,
     ShowContactComponent,
     SearchComponent,
-    MainComponent
+    MainComponent,
+    DashboardComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -42,11 +46,11 @@ import { MainComponent } from './Main/main/main.component';
     ReactiveFormsModule
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: InterceptorAuth,
-      multi: true
-    }
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: InterceptorAuth,
+    //   multi: true
+    // }
   ],
   bootstrap: [AppComponent]
 })
