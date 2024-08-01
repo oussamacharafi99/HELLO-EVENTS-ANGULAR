@@ -5,9 +5,8 @@
     padding: 10px;
     height: 300px;
     width: 100%;
-    overflow-y: auto; /* Gérer le débordement horizontal */
+    overflow-y: auto;
   }
-  
   table {
     width: 100%;
     min-width: 600px; /* Largeur minimale pour éviter les débordements */

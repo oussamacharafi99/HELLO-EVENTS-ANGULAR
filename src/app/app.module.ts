@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderHomeComponent } from './Home/header-home/header-home.component';
 import { SingupComponent } from './Home/singup/singup.component';
 import { LoginComponent } from './Home/login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { InterceptorAuth } from './Srevice/auth_interceptor.service';
 import { HomeComponent } from './Home/home/home.component';
 import { AddEventComponent } from './Dashboard/add-event/add-event.component';
@@ -48,7 +48,9 @@ import { MaterialeModule } from './materiale/materiale.module';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialeModule
+    MaterialeModule,
+    FormsModule
+
   ],
   providers: [
     // {

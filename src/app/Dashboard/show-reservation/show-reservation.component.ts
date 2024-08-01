@@ -8,7 +8,7 @@ import { ServiceService } from 'src/app/Srevice/service.service';
   styleUrls: ['./show-reservation.component.css']
 })
 export class ShowReservationComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'event', 'user', 'reservationDate', 'numberOfTickets'];
+  displayedColumns: string[] = ['id', 'event', 'user', 'reservationDate', 'numberOfTickets', 'delete'];
   dataSource: Reservation[] = [];
 
   constructor(private service: ServiceService) { }
@@ -22,7 +22,12 @@ export class ShowReservationComponent implements OnInit {
     });
   }
 
-  onRemove(){
-    this.service
+  deleteReservation(id: number): void {
+    this.service.deleteReservationById(id).subscribe(() => {
+      this.dataSource = this.dataSource.filter(reservation => reservation.id !== id);
+      console.log(`Reservation with ID ${id} has been deleted`);
+    }, error => {
+      console.error("Erreur lors de la suppression de la réservation", error);
+    });
   }
 }

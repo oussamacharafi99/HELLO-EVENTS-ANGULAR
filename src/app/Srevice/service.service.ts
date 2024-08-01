@@ -77,7 +77,7 @@ public searchEvents(date?: string, location?: string, category?: string): Observ
     params = params.set('category', category);
   }
 
-  return this.http.get<Event[]>(`${this._API_EVENT}seatch`, { params });
+  return this.http.get<Event[]>(`${this._API_EVENT}search`, { params });
 }
 
 
@@ -110,6 +110,8 @@ public addReservation(reservation: Reservation): Observable<Reservation> {
 public addContact(contact:Contact,id:number): Observable<Contact> {
   return this.http.post<Contact>(`${this._API_CONTACT}add/${id}`, contact);
 }
+
+
 
   /*----*__GET_Contact_By_User_Id__*-----*/
  public getContactByUserId(id:number): Observable<Contact[]> {
