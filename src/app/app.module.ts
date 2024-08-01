@@ -7,7 +7,7 @@ import { HeaderHomeComponent } from './Home/header-home/header-home.component';
 import { SingupComponent } from './Home/singup/singup.component';
 import { LoginComponent } from './Home/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { InterceptorAuth } from './Srevice/auth_interceptor.service';
+// import { InterceptorAuth } from './Srevice/auth_interceptor.service';
 import { HomeComponent } from './Home/home/home.component';
 import { AddEventComponent } from './Dashboard/add-event/add-event.component';
 import { EventComponent } from './Main/event/event.component';
@@ -46,11 +46,11 @@ import { LogoutComponent } from './Dashboard/logout/logout.component';
     ReactiveFormsModule
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: InterceptorAuth,
-      multi: true
-    }
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: InterceptorAuth,
+    //   multi: true
+    // }
   ],
   bootstrap: [AppComponent]
 })
