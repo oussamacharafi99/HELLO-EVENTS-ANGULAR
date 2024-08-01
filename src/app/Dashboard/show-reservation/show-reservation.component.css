@@ -1,0 +1,32 @@
+.mat-elevation-z8 {
+    background-color: #42424200; /* Couleur de fond sombre pour la table */
+    color: #fff; /* Couleur du texte blanche */
+    margin: 10px 0;
+    padding: 10px;
+    height: 300px;
+    width: 100%;
+    overflow-y: auto; /* Gérer le débordement horizontal */
+  }
+  
+  table {
+    width: 100%;
+    min-width: 600px; /* Largeur minimale pour éviter les débordements */
+    border-radius: 12px;
+    background: transparent;
+  }
+  
+  th.mat-header-cell, td.mat-cell {
+    color: #fff; /* Couleur du texte blanche pour les cellules */
+    background: transparent;
+  }
+  
+  th.mat-header-cell {
+    background-color: #0202028a; /* Couleur de fond pour les en-têtes de colonne */
+  }
+  
+  td.mat-cell {
+    background-color: transparent; /* Couleur de fond pour les cellules */
+  }
+#id:hover{
+    background-color: #1c1c1c; /* Couleur de fond pour les cellules */
+  }
