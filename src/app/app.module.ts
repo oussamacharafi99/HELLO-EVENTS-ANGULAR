@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,8 @@ import { SearchComponent } from './Main/search/search.component';
 import { MainComponent } from './Main/main/main.component';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { LogoutComponent } from './Dashboard/logout/logout.component';
+import { MaterialeModule } from './materiale/materiale.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +47,10 @@ import { LogoutComponent } from './Dashboard/logout/logout.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialeModule,
     FormsModule
+
   ],
   providers: [
     // {
