@@ -3,7 +3,11 @@
         <img src="../../../assets/images/logo.png" alt="logo">
     </div>
     <div class="btns animate__animated animate__fadeInUp animate__delay-2s">
-        <button id="login">Login</button>
+        <button id="login" (click)="onOpenOrClose(true)">Login</button>
         <button id="signup">Signup</button>
     </div>
 </div>
+<section class="popup" [ngStyle]="{'display': check ? 'flex' : 'none'}">
+    <button (click)="onOpenOrClose(false)">Close</button>
+      <app-login></app-login>
+  </section>
