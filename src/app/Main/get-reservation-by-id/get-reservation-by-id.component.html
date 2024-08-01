@@ -1,1 +1,12 @@
-<p>get-reservation-by-id works!</p>
+<p>event works!</p>
+<div>
+  <h2>Upcoming Events</h2>
+  <ul>
+    <li *ngFor="let reservation of listReservation">
+      
+      <p><strong>Location:</strong> {{ reservation.numberOfTickets }}</p>
+      <p><strong>Date:</strong> {{ reservation.reservationDate }}</p>
+      
+    </li>
+  </ul>
+</div>

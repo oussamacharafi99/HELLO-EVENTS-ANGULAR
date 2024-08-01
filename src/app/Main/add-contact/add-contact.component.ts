@@ -26,9 +26,9 @@ export class AddContactComponent implements OnInit {
     const storedJwtData = localStorage.getItem('jwtData');
     if (storedJwtData) {
         const jwtData: JwtDto = JSON.parse(storedJwtData);
-        const user_id =jwtData.userId
-        this.currentUserId = user_id
-        console.log("----------> " + user_id);
+        const userId =jwtData.userId
+        this.currentUserId = userId
+        console.log("----------> " + userId);
       }
   }
   
@@ -48,8 +48,7 @@ export class AddContactComponent implements OnInit {
   onSubmit() {
     if (this.formContact.valid) {
       const contact: Contact = {
-        ...this.formContact.value,
-        userId: this.currentUserId
+        ...this.formContact.value
       };
       this.service.addContact(contact,this.currentUserId).subscribe(res => {
         console.log(res); 

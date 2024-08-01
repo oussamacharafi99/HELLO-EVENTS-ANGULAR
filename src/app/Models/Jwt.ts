@@ -1,5 +1,6 @@
+
 export interface JwtDto{
 
-    user_id : number
+    userId : number
     token : string
 }

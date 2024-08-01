@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Reservation } from 'src/app/Models/reservation';
+import { ServiceService } from 'src/app/Srevice/service.service';
 
 @Component({
   selector: 'app-get-reservation-by-id',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetReservationByIdComponent implements OnInit {
 
-  constructor() { }
+  listReservation: Reservation[] = []
+
+  constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
+    this.service.getUserReservation().subscribe((data : any[]) => {
+      this.listReservation = data;
+      console.log("this data", data);
+    });
   }
-
 }
