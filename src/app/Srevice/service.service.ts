@@ -30,6 +30,7 @@ export class ServiceService {
     return this.http.post<JwtDto>(this._API_LOGIN, user);
   }
 
+  
   /*----*__SIGNUP__*-----*/
   public signup(user: User): Observable<string> {
     return this.http.post<string>(this._API_SIGNUP, user);
@@ -92,6 +93,7 @@ public addReservation(reservation: Reservation): Observable<Reservation> {
  public getUserReservation(): Observable<Reservation[]> {
   return this.http.get<Reservation[]>(`${this._API_RESERVATION}get_user_reservation`);
 }
+
  /*----*__GET_All_RESERVATION__*-----*/
  public getAllReservation(): Observable<Reservation[]> {
   return this.http.get<Reservation[]>(`${this._API_RESERVATION}get_all`);
@@ -109,6 +111,8 @@ public addReservation(reservation: Reservation): Observable<Reservation> {
 public addContact(contact:Contact,id:number): Observable<Contact> {
   return this.http.post<Contact>(`${this._API_CONTACT}add/${id}`, contact);
 }
+
+
 
   /*----*__GET_Contact_By_User_Id__*-----*/
  public getContactByUserId(id:number): Observable<Contact[]> {

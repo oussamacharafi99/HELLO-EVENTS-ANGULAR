@@ -1,0 +1,10 @@
+
+<form [formGroup]="formContact" (ngSubmit)="onSubmit()">
+  <div>
+     <label for="message">message:</label>
+    <input id="message" formControlName="message" type="text" />
+  </div>
+
+  <button type="submit" [disabled]="formContact.invalid">Add</button>
+</form>
+
