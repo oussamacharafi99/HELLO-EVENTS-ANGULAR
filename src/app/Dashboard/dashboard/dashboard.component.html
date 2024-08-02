@@ -8,10 +8,10 @@
                 <h1>ADMIN</h1>
               </div>
               <div class="menu-link">
-                <a routerLink="/#" id="a1"><img src="../../../assets/icons/event.png" alt="">Events</a>
+                <a routerLink="/#" id="a1"><img src="../../../assets/icons/home.png" alt="">Home</a>
                 <a routerLink="/#"><img src="../../../assets/icons/reserved.png" alt=""> Reservations</a>
                 <a routerLink="/#"><img src="../../../assets/icons/statistics.png" alt=""> Statistis</a>
-                <a routerLink="/#"><img src="../../../assets/icons/accountant.png" alt=""> Accounts</a>
+                <a (click)="onOpenOrClose(true)"><img src="../../../assets/icons/event.png" alt=""> Events</a>
                 <a routerLink="/#"><img src="../../../assets/icons/setting.png" alt=""> Settings</a>
               </div>
               <app-logout></app-logout>
@@ -39,6 +39,17 @@
                             <h5>contact</h5>
                             <app-show-contact></app-show-contact>
                           </div>
+                            <br>
+                          <div class="Contact">
+      
+                          </div>
+                        </div>
+
+                        <div class="body-hero-main-bottom-right">
+                          <div class="event">
+                            <h5>Add Event</h5>
+                            <app-add-event></app-add-event>
+                          </div>
                         </div>
                     </div>
                   </div>
@@ -47,3 +58,8 @@
         </div>
     </div>
 </div>
+
+<section class="popup" [ngStyle]="{'display': check ? 'flex' : 'none'}">
+  <button (click)="onOpenOrClose(false)">Close</button>
+      
+</section>

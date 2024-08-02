@@ -125,7 +125,9 @@
 }
 .body-hero-main-bottom{
     width: 100%;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 .body-hero-main-bottom-left{
     width: 60%;
@@ -137,6 +139,21 @@
     border-radius: 12px;
 }
 .Contact > h5 {
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+}
+
+.body-hero-main-bottom-right{
+    width: 39%;
+}
+.event{
+    width: 100%;
+    padding:10px 20px;
+    background:#00000047;
+    border-radius: 12px;
+}
+.event > h5 {
     font-size: 22px;
     font-weight: 800;
     color: white;

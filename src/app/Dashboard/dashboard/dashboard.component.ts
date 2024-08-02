@@ -12,4 +12,9 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  check = false;
+  onOpenOrClose(check: boolean): void {
+    this.check = check;
+  }
+
 }

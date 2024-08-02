@@ -7,9 +7,8 @@ export interface Event {
     description: string;
     location: string;
     category: string;
-    startTime: string; // Use string to represent time in HH:mm format
-    date: string; // Use string to represent date in ISO format
+    startTime: string; 
+    date: string; 
     price: number;
-    reservations: Reservation[];
     user: User;
   }
