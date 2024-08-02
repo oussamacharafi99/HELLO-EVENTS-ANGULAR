@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { JwtDto } from 'src/app/Models/Jwt';
+import { Contact } from 'src/app/Models/conatct';
+import { ServiceService } from 'src/app/Srevice/service.service';
+
 
 @Component({
   selector: 'app-show-contact',
@@ -8,10 +10,21 @@ import { JwtDto } from 'src/app/Models/Jwt';
 })
 export class ShowContactComponent implements OnInit {
 
-  constructor() { }
+  ListContact: Contact[] = [];
+  displayedColumns: string[] = ['id', 'message', 'contactDate', 'user', 'delete'];
+
+  constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
+    this.service.getAllContact().subscribe((data: Contact[]) => {
+      this.ListContact = data;
+    }, error => {
+      console.error("Erreur lors de la récupération des contacts :", error);
+    });
   }
 
-  
+  deleteContact(id: number): void {
+    // Logique pour supprimer un contact par son ID
+    console.log(`Suppression du contact avec l'ID : ${id}`);
+  }
 }

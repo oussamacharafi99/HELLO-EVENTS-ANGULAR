@@ -30,7 +30,7 @@
     background: rgba(0, 0, 0, 0.311);
     backdrop-filter: blur(10px);
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     right: 65px;
     display: flex;
     align-items: center;

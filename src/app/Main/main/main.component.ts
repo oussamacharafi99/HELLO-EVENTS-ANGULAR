@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
+  }
+
+  check = false;
+  logout(check : boolean) {
+    if(check){
+      localStorage.removeItem('jwtData');
+    this.router.navigateByUrl('/fr');
+    }
+    else{
+      console.log("wa hasan");
+    }
+    
   }
 
 }

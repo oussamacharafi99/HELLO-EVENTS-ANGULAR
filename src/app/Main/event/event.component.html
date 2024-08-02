@@ -30,7 +30,7 @@
               <p><strong>Date:</strong> {{ event.date }}</p>
               <p><strong>Time:</strong> {{ event.startTime }}</p>
               <p><strong>Price:</strong> {{ event.price | currency }}</p> 
-              <a href="#">buy ticket</a>
+              <button (click)="onSub(event.id)">buy ticket</button>
               </div>
           </div>
       </div>

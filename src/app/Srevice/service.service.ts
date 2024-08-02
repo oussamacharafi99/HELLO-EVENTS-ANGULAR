@@ -35,6 +35,8 @@ export class ServiceService {
     return this.http.post<string>(this._API_SIGNUP, user);
   }
 
+  
+
   /*----*__ADD_EVENT__*-----*/
   public addEvents(event: Event): Observable<Event> {
     return this.http.post<Event>(this._API_ADD_EVENT, event);

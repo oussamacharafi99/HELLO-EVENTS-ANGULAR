@@ -23,10 +23,8 @@
     box-shadow: 4px 4px 15px #00000041;
     border: 1px solid transparent;
 }
-.logout > a:hover{
-    background:rgba(0, 0, 0, 0.795) ;
-    backdrop-filter: blur(10px);
-    border: 1px solid grey;
+.logout > a:hover {
+    background:var(--color-bleuvoilet) ;
 }
 .logout > a > img {
     width: 20px;

@@ -1,0 +1,52 @@
+form{
+    width: 100%;
+}
+.form-group{
+    width: 100%;
+}
+.form-group > label{
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    padding-bottom: 5px;
+}
+.form-group > input{
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid grey;
+    width: 100%;
+    background: transparent;
+    margin: 5px 0;
+    color: white;
+    font-weight: 600;
+}
+.form-group > input::placeholder{
+    color: white;
+    font-weight: 600;
+}
+textarea{
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid grey;
+    width: 100%;
+    background: transparent;
+    margin: 5px 0;
+    color: white;
+    font-weight: 700;
+}
+form > button{
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background: black;
+    transition: .4s;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin: 5px auto;
+}
+form > button:hover{
+    color: white;
+    border: 1px solid white;
+    background: transparent;
+}
