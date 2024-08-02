@@ -1,0 +1,114 @@
+form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 45px;
+}
+
+.input{
+   height: 35px;
+   width: 240px;
+   margin-left: 7px;
+}
+
+.submit{
+    height: 35px;
+    width: 80px;
+    margin-left: 20px;
+ }
+.searchResult{
+    background-color: rgb(133, 131, 131);
+    width: 100%;
+    height: auto;
+}.container{
+    margin-top: 20px;
+    margin-left: 34px;
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .card .face{
+    width: 240px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    background-color: rgb(4, 0, 255);
+    transform: translateY(100px);
+    border: 1px solid rgb(255, 0, 0);
+}
+.img{
+    height: 220px;
+    border: 1px solid rgb(0, 0, 0);
+
+}
+
+.container .card:hover .face.face1{
+    background-color: #ffffff;
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    transition: 0.5s;
+    margin-bottom: 20px;
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+    max-width: 50px;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #000000;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    margin-top: 7px;
+    padding: 0;
+}
+
+.container .card .face.face2 .content a{
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #1100ff;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.face2 .content a:hover{
+   
+}

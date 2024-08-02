@@ -1,0 +1,24 @@
+.container{
+    background-color: #F1F2EB;
+}
+.nav{
+    background-color: #B9E3C6;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    margin-bottom: 50px;
+}
+#logo{
+    width: 100px;
+}
+.btn{
+    background-color: red;
+    padding: 7px 13px;
+}
+.line{
+    border: 1px solid rgb(0, 0, 255);
+    
+}

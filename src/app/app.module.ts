@@ -21,6 +21,7 @@ import { SearchComponent } from './Main/search/search.component';
 import { MainComponent } from './Main/main/main.component';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { LogoutComponent } from './Dashboard/logout/logout.component';
+import { InterceptorAuth } from './Srevice/auth_interceptor.service';
 import { MaterialeModule } from './materiale/materiale.module';
 
 @NgModule({
@@ -48,16 +49,17 @@ import { MaterialeModule } from './materiale/materiale.module';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialeModule,
-    FormsModule
+    FormsModule,
+    MaterialeModule
+
 
   ],
   providers: [
-    // {
-    //   provide: HTTP_INTERCEPTORS,
-    //   useClass: InterceptorAuth,
-    //   multi: true
-    // }
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorAuth,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
