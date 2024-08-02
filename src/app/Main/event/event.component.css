@@ -1,106 +1,85 @@
-.first-container{
-    margin: 0;
-    padding: 0;
-    min-height: 220vh;
-    background: #eaeaea;
+.search{
+    width: 100%;
+    background: rgba(78, 78, 78, 0.468);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 12px; 
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.486);
+}
+.search > form {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    font-family: consolas;
-    border: 1px solid black;
-    margin-bottom: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+.group-search{
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+.group-search > label{
+    padding: 8px;
+    color: white;
+    font-size: 14px ;
+    font-weight: 700;
+}
+.group-search > input{
+    background: transparent;
+    padding: 8px;
+    color: white;
+    border: none;
+    border-left: 1px solid grey;
+}
+.group-search > input::placeholder{
+    color: white;
+}
+.group-search  > button{
+    background: transparent;
+    padding: 8px;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 7px;
 }
 
 .container{
-    margin-top: 20px;
-    width: 1000px;
-    position: relative;
+    width: 90%;
+    max-height: 360px;
+    margin: 10px auto;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    text-align: left;
+    overflow-y: auto;
 }
-
-
-
-
-.container .card .face{
-    width: 240px;
-    transition: 0.5s;
+.card{
+    flex-wrap: 1 24%;
+    width: 24%;
+    background: #fafafa67;
+    backdrop-filter: blur(5px);
+    margin: 5px 3px;
+    border-radius: 7px;
 }
-
-.container .card .face.face1{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-    background-color: rgb(4, 0, 255);
-    transform: translateY(100px);
-    border: 1px solid rgb(255, 0, 0);
+.face{
+    width: 100%;
 }
-.img{
-    height: 220px;
-    border: 1px solid rgb(0, 0, 0);
+.content{
+    padding: 10px;
+}
+.content > p {
+    color: white;
+    font-size: 16px;
 
 }
-
-.container .card:hover .face.face1{
-    background-color: #ffffff;
-    transform: translateY(0);
-}
-
-.container .card .face.face1 .content{
-    transition: 0.5s;
-    margin-bottom: 20px;
-}
-
-.container .card:hover .face.face1 .content{
-    opacity: 1;
-}
-
-.container .card .face.face1 .content img{
-    max-width: 50px;
-}
-
-.container .card .face.face1 .content h3{
-    margin: 10px 0 0;
-    padding: 0;
-    color: #000000;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.container .card .face.face2{
-    position: relative;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transform: translateY(-100px);
-}
-
-.container .card:hover .face.face2{
-    transform: translateY(0);
-}
-
-.container .card .face.face2 .content p{
-    margin: 0;
-    margin-top: 7px;
-    padding: 0;
-}
-
-.container .card .face.face2 .content a{
-    display:  inline-block;
-    text-decoration: none;
-    font-weight: 900;
-    color: #1100ff;
+#addres{
     padding: 5px;
-    border: 1px solid #333;
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 5px;
+    color: black;
+    font-weight: 700;
+    transition: .4s;
 }
-
-.container .card .face.face2 .content a:hover{
-   
+#addres:hover{
+    background: black;
+    color: white;
 }

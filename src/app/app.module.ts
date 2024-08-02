@@ -12,7 +12,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './Home/home/home.component';
 import { AddEventComponent } from './Dashboard/add-event/add-event.component';
 import { EventComponent } from './Main/event/event.component';
-import { ReservationComponent } from './Main/add-reservation/reservation.component';
 import { ShowReservationComponent } from './Dashboard/show-reservation/show-reservation.component';
 import { GetReservationByIdComponent } from './Main/get-reservation-by-id/get-reservation-by-id.component';
 import { AddContactComponent } from './Main/add-contact/add-contact.component';
@@ -34,7 +33,6 @@ import { ChartComponent } from './Dashboard/chart/chart.component';
     HomeComponent,
     AddEventComponent,
     EventComponent,
-    ReservationComponent,
     ShowReservationComponent,
     GetReservationByIdComponent,
     AddContactComponent,
