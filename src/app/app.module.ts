@@ -49,7 +49,9 @@ import { MaterialeModule } from './materiale/materiale.module';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MaterialeModule
+
 
   ],
   providers: [

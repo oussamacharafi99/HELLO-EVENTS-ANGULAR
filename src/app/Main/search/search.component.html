@@ -1,16 +1,21 @@
 <form (ngSubmit)="onSearch()">
+  <div>
     <label for="date">Date:</label>
-    <input id="date" name="date" [(ngModel)]="searchParams.date" type="date">
-  
+    <input class="input" id="date" name="date" [(ngModel)]="searchParams.date" type="date">
+  </div>
+<div>
     <label for="location">Location:</label>
-    <input id="location" name="location" [(ngModel)]="searchParams.location" type="text">
-  
+    <input class="input" id="location" name="location" [(ngModel)]="searchParams.location" type="text">
+  </div>
+<div>
     <label for="category">Category:</label>
-    <input id="category" name="category" [(ngModel)]="searchParams.category" type="text">
-  
-    <button type="submit">Search</button>
+    <input class="input" id="category" name="category" [(ngModel)]="searchParams.category" type="text">
+    <button class="submit" type="submit">Search</button>
+  </div>
   </form>
   
+  <!-- <div class="searchResult">
+    <div class="card">
   <ul *ngFor="let event of events">
     <li >{{ event.name }}</li>
     <li >{{ event.date }}</li>
@@ -19,4 +24,29 @@
     <li >{{ event.price }}</li>
     <li >{{ event.category }}</li>
   </ul>
+    </div>
+</div> -->
+
+
+<div class="container">
+  <div class="card"  *ngFor="let event of events">
+      <div class="face face1">
+        <img class="img" src="https://th.bing.com/th/id/OIP.gOlNpFyzOpgs03pR_ql2_wHaGz?w=500&h=459&rs=1&pid=ImgDetMain">
+          <div class="content">
+              <h3>{{ event.name }}</h3>
+          </div>
+      </div>
+      <div class="face face2">
+          <div class="content">
+            <p>{{ event.description }}</p>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p> -->
+         <p><strong>Location:</strong> {{ event.location }}</p>
+          <p><strong>Date:</strong> {{ event.date }}</p>
+          <p><strong>Time:</strong> {{ event.startTime }}</p>
+          <p><strong>Price:</strong> {{ event.price | currency }}</p> 
+          <a href="#">buy ticket</a>
+          </div>
+      </div>
+  </div>
   
+</div>
