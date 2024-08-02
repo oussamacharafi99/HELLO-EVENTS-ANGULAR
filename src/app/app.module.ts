@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,8 @@ import { MainComponent } from './Main/main/main.component';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { LogoutComponent } from './Dashboard/logout/logout.component';
 import { InterceptorAuth } from './Srevice/auth_interceptor.service';
+import { MaterialeModule } from './materiale/materiale.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +48,9 @@ import { InterceptorAuth } from './Srevice/auth_interceptor.service';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     FormsModule
+
   ],
   providers: [
     {
