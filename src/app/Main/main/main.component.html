@@ -1,7 +1,29 @@
+<div class="main">
+  <div class="main-wrapper">
+    <div class="nav">
+      <div class="img-nav">
+        <img id="logo" src="../../../assets/images/logowhite.png" alt="logo" />
+      </div>
+      <div class="logout">
+        <a routerLink=""><img src="../../../assets/icons/logout.png" alt="" (click)="logout(true)"> Logout</a>
+      </div>
+    </div>
 
-<!-- <app-add-contact></app-add-contact> -->
-<app-get-reservation-by-id></app-get-reservation-by-id>
- <!-- <app-singup></app-singup> -->
-<!-- <app-event></app-event> -->
+    <div class="search">
+        <app-event></app-event>
+    </div>
+  </div>
+</div>
 
-<!-- <app-add-contact></app-add-contact> -->
+<!-- <div class="app-search">
+    <app-search></app-search>
+  </div>
+
+  <div>
+    <app-event></app-event>
+  </div>
+
+  <div class="line"></div>
+  <div>
+    <app-add-contact></app-add-contact>
+  </div> -->

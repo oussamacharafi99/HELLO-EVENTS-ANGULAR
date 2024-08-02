@@ -21,7 +21,7 @@ export class AddEventComponent implements OnInit {
       category: ['', Validators.required],
       startTime: ['', Validators.required],
       date: ['', Validators.required],
-      price: [0, [Validators.required, Validators.min(0)]]
+      price: ['', [Validators.required, Validators.min(0)]]
     });
   }
 
