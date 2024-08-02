@@ -15,9 +15,7 @@ export class ServiceService {
   private _API_SIGNUP = 'http://localhost:9000/api/user/signup';
   private _API_LOGIN = 'http://localhost:9000/api/user/login';
   private _API_GET_EVENTS = 'http://localhost:9000/api/events/get_all';
-
   private _API_EVENT = 'http://localhost:9000/api/events/';
-
   private _API_RESERVATION = 'http://localhost:9000/api/reservations/';
   private _API_CONTACT = 'http://localhost:9000/api/contact/';
 
